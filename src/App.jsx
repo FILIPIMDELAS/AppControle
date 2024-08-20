@@ -1,5 +1,5 @@
 import './App.css'
-import DivSide from './Components/Side/DivSide.jsx'
+import DivSide from './Components/SideBar/DivSide.jsx'
 
 function App() {
 
