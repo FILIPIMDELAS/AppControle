@@ -19,6 +19,7 @@ export default function ButtonsSide(){
             div.style.display = 'flex'
         }
     }
+    
     return(
         <>
             {MenuItens.map((itens, index) => {

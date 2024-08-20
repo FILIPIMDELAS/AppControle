@@ -2,7 +2,7 @@
   --colorPrimaryLight: #6e768e;
   --colorSecundaryLight: #f5f5f5;
   --colorPrimaryWhite: white;
-  --colorPrimaryBlue: Blue;
+  --colorPrimaryBlue: rgb(68, 68, 226);
 }
 
 *{
@@ -20,7 +20,6 @@ body{
 
 #root{
   display: flex;
-  flex-direction: column;
   width: 100dvw;
   height: 100dvh;
 }
