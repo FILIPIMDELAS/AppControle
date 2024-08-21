@@ -14,19 +14,19 @@ export const MenuItens = [
         itens:[
             {
                 title: 'Obra',
-                link: ''
+                link: '/Work'
             },
             {
                 title: 'Serviços',
-                link: ''
+                link: '/Service'
             },
             {
                 title: 'Fornecedor',
-                link: ''
+                link: '/Supplier'
             },
             {
                 title: 'Usuario',
-                link: ''
+                link: '/User'
             }
         ],
         link: ''

@@ -1,15 +1,17 @@
 import './App.css'
-import DivSide from './Components/SideBar/DivSide.jsx'
-import DivTop from './Components/TopBar/DivTop.jsx'
+import RoutesApp from './Routes'
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-
   return (
     <>
-      <DivSide />
-      <DivTop />
+      <BrowserRouter>
+        <RoutesApp />
+      </BrowserRouter>
     </>
   )
 }
 
 export default App
+
+
