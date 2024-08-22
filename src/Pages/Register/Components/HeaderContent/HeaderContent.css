@@ -1,0 +1,31 @@
+.HeaderContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderHeader{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.InfoHeader{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.searchGeneral{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--colorPrimaryLight);
+
+    & input{
+        padding: 5px 5px 5px 10px;
+        border-radius: 3px;
+        background-color: var(--colorPrimaryWhite);
+        border: 2px solid black;
+        color: black;
+    }
+}

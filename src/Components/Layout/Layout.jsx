@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import DivSide from "../SideBar/DivSide"
 import DivTop from "../TopBar/DivTop"
 import './Layout.css'
@@ -9,7 +10,11 @@ export default function Layout({ children }){
             <DivSide />
             <div className="ContainerContent">
                 <DivTop />
-                <div className="DivChildren">{children}</div>
+                <div className="DivChildren">
+                    <div className="ContentGeneral">
+                        {children}
+                    </div>
+                </div>
             </div>
         </div>
     )

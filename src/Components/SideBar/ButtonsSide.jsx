@@ -18,7 +18,7 @@ export default function ButtonsSide(){
                         <div className='ContentTitle select' onClick={() => {
                             const icon = document.getElementById(`icons${index}`)
                             const div = document.getElementById(`subDiv${index}`)
-                            if(div.style.display == 'flex'){
+                            if(div.style.display === 'flex'){
                                 icon.classList.add('animationDesactiveIcon')
                                 icon.classList.remove('animationActiveIcon')
                                 div.classList.add('animationDesactiveDiv')
@@ -30,13 +30,12 @@ export default function ButtonsSide(){
                                 div.classList.add('animationActiveDiv')
                                 div.classList.remove('animationDesactiveDiv')
                                 div.style.display = 'flex'
-                            }
-                        }}>
+                            }}}>
                             <div className='ButtonIcon'>
-                                {itens.title == `Novidades` ? <TbNews className='iconDescriptions'/> : ""}
-                                {itens.title == `Pagina Inicial` ? <IoHomeOutline className='iconDescriptions'/> : ""}
-                                {itens.title == `Cadastro` ? <PiCashRegisterLight className='iconDescriptions'/> : ""}
-                                {itens.title == `Controle de Obras` ? <FaRegBuilding className='iconDescriptions'/> : ""}
+                                {itens.title === `Novidades` ? <TbNews className='iconDescriptions'/> : ""}
+                                {itens.title === `Pagina Inicial` ? <IoHomeOutline className='iconDescriptions'/> : ""}
+                                {itens.title === `Cadastro` ? <PiCashRegisterLight className='iconDescriptions'/> : ""}
+                                {itens.title === `Controle de Obras` ? <FaRegBuilding className='iconDescriptions'/> : ""}
                                 <button className="butSide">{itens.title}</button>
                             </div>
                             {itens.itens != "" ? <IoChevronForwardOutline className='i_Side' id={`icons${index}`}/> : ""}
