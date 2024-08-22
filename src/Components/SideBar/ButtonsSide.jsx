@@ -36,7 +36,7 @@ export default function ButtonsSide(){
                                 {itens.title === `Pagina Inicial` ? <IoHomeOutline className='iconDescriptions'/> : ""}
                                 {itens.title === `Cadastro` ? <PiCashRegisterLight className='iconDescriptions'/> : ""}
                                 {itens.title === `Controle de Obras` ? <FaRegBuilding className='iconDescriptions'/> : ""}
-                                <button className="butSide">{itens.title}</button>
+                                {itens.link != "" ? <button className="butSide" onClick={()=>{window.location.href = itens.link}}>{itens.title}</button> : <button className="butSide">{itens.title}</button>}
                             </div>
                             {itens.itens != "" ? <IoChevronForwardOutline className='i_Side' id={`icons${index}`}/> : ""}
                         </div>

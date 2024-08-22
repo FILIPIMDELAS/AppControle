@@ -7,6 +7,7 @@ import User from './Pages/Register/User/User'
 import NewRegUser from './Pages/Register/User/NewRegUser'
 import Supplier from './Pages/Register/Supplier/Supplier'
 import NewRegSup from './Pages/Register/Supplier/NewRegSup'
+import Home from './Pages/Home/Home'
 
 export default function RoutesApp() {
     const BackdropAction = ({ children }) => {
@@ -24,6 +25,7 @@ export default function RoutesApp() {
           <Route exact path='/newregUser' element={<NewRegUser />} />
           <Route exact path='/Supplier' element={<Supplier />} />
           <Route exact path='/newregSupplier' element={<NewRegSup />} />
+          <Route exact path='/Home' element={<Home />} />
           <Route exact path='/' element={<Service />} />
         </Routes>
       </BackdropAction>

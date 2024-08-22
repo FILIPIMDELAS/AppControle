@@ -7,7 +7,7 @@ export const MenuItens = [
     {
         title: 'Pagina Inicial',
         itens: '',
-        link: ''
+        link: '/Home'
     },
     {
         title: 'Cadastro',

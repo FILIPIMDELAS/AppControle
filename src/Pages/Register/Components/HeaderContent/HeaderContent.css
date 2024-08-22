@@ -13,6 +13,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
+
 }
 
 .searchGeneral{
@@ -25,7 +26,7 @@
         padding: 5px 5px 5px 10px;
         border-radius: 3px;
         background-color: var(--colorPrimaryWhite);
-        border: 2px solid black;
+        border: 2px solid var(--colorInput);
         color: black;
     }
 }

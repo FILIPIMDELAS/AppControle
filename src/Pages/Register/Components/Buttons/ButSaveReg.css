@@ -1,9 +1,9 @@
 .ButSaveReg{
     display: flex;
-
+    align-items: center;
     justify-content: center;
     background-color: var(--colorPrimaryBlue);
-    padding: 5px 5px 5px 5px;
+    padding: 10px 5px 10px 5px;
     border-radius: 3px;
     box-shadow: 0px 0px 10px var(--colorPrimaryBlue);
     cursor: pointer;
