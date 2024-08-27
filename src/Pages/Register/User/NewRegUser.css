@@ -1,3 +1,11 @@
 .divAct{
     width: 20%;
 }
+
+.divFun{
+    width: 100%;
+
+    #inputFun{
+        width: 25%;
+    }
+}

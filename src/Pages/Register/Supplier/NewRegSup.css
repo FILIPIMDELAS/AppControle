@@ -1,0 +1,38 @@
+.divPer{
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  #inputPer{
+    box-shadow: none;
+    width: 20px;
+  }
+}
+
+.divJur{
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  #inputJur{
+    width: 20px;
+    box-shadow: none;
+  }
+}
+
+
+.divCP{
+  width: 20%;
+}
+
+.divRSoc{
+  width: 40%;
+}
+
+.divNFant{
+  width: 40%;
+}

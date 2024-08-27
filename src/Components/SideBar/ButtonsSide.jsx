@@ -75,7 +75,7 @@ export default function ButtonsSide(){
                                                                     {subitens.itens.map((subSubitens, index) => {
                                                                         return(
                                                                             <>
-                                                                                {subSubitens.link == "" ? 
+                                                                                {subSubitens.link != "" ? 
                                                                                     <ul key={index} className='ContentTitle select'>
                                                                                         <li className="butSide" onClick={()=>{window.location.href = subSubitens.link}}>{subSubitens.title}</li>
                                                                                     </ul>
