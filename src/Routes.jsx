@@ -26,7 +26,7 @@ export default function RoutesApp() {
           <Route exact path='/Supplier' element={<Supplier />} />
           <Route exact path='/newregSupplier' element={<NewRegSup />} />
           <Route exact path='/Home' element={<Home />} />
-          <Route exact path='/' element={<Service />} />
+          <Route exact path='/' element={<Home />} />
         </Routes>
       </BackdropAction>
     );

@@ -5,7 +5,7 @@ import './Work.css'
 export default function Work(){
     return(
         <Layout> 
-            <p className='DescriptionDisplay'>Cadastro de Obra</p>
+            <p className='DescriptionDisplay'>Cadastro de Obras</p>
             <HeaderContent link='Work'/>
         </Layout>
     )

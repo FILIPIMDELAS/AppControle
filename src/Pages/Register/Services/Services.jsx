@@ -5,7 +5,7 @@ import './Services.css'
 export default function Service(){
     return(
         <Layout> 
-            <p className='DescriptionDisplay'>Cadastro de Serviço</p>
+            <p className='DescriptionDisplay'>Cadastro de Serviços</p>
             <HeaderContent link='Service'/>
         </Layout>
     )

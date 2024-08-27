@@ -5,11 +5,11 @@ import './NewRegWork.css'
 export default function NewRegWork(){
     return(
         <Layout>
-            <p className='DescriptionDisplay'>Cadastro de Obra</p>
+            <p className='DescriptionDisplay'>Cadastro de Nova Obra</p>
             <div style={{ display: 'flex', padding: '5px 0px', justifyContent: 'center', gap: '.5%' }}>
                 <div className='divCod divs'>
                     <label htmlFor="inputCod">Código</label>
-                    <div id='inputCod'>Gerado automaticamente pelo sistema</div>
+                    <input type="text" id='inputCod'/>
                 </div>
                 <div className='divDesc divs'>
                     <label htmlFor="inputDesc">Descrição</label>

@@ -13,21 +13,44 @@ export const MenuItens = [
         title: 'Cadastro',
         itens:[
             {
+                title: 'Usuarios',
+                itens: [
+                    {
+                        title: 'Usuario',
+                        itens: '',
+                        link: '/User',
+                    },
+                    {
+                        title: 'Função',
+                        itens: '',
+                        link: '/function',
+                    },
+                    {
+                        title: 'Grupo de Usuario',
+                        itens: '',
+                        link: '/function',
+                    },
+                ],
+                link: '',
+            },
+            {
                 title: 'Obra',
-                link: '/Work'
-            },
-            {
-                title: 'Serviços',
-                link: '/Service'
-            },
-            {
-                title: 'Fornecedor',
-                link: '/Supplier'
-            },
-            {
-                title: 'Usuario',
-                link: '/User'
-            }
+                itens: [
+                    {
+                        title: 'Obra',
+                        link: '/Work'
+                    },
+                    {
+                        title: 'Serviços',
+                        link: '/Service'
+                    },
+                    {
+                        title: 'Fornecedor',
+                        link: '/Supplier'
+                    },
+                ],
+                link: '',
+            },            
         ],
         link: ''
     },

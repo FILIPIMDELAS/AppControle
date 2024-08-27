@@ -12,12 +12,12 @@ import { TbNews } from "react-icons/tb";
 export default function ButtonsSide(){
     return(
         <>
-            {MenuItens.map((itens, index) => {
+            {MenuItens.map((iten, index) => {
                 return(
                     <div className='divSide' key={index}>
                         <div className='ContentTitle select' onClick={() => {
-                            const icon = document.getElementById(`icons${index}`)
-                            const div = document.getElementById(`subDiv${index}`)
+                            const icon = document.getElementById(`icons${iten.title}${index}`)
+                            const div = document.getElementById(`subDiv${iten.title}${index}`)
                             if(div.style.display === 'flex'){
                                 icon.classList.add('animationDesactiveIcon')
                                 icon.classList.remove('animationActiveIcon')
@@ -32,26 +32,65 @@ export default function ButtonsSide(){
                                 div.style.display = 'flex'
                             }}}>
                             <div className='ButtonIcon'>
-                                {itens.title === `Novidades` ? <TbNews className='iconDescriptions'/> : ""}
-                                {itens.title === `Pagina Inicial` ? <IoHomeOutline className='iconDescriptions'/> : ""}
-                                {itens.title === `Cadastro` ? <PiCashRegisterLight className='iconDescriptions'/> : ""}
-                                {itens.title === `Controle de Obras` ? <FaRegBuilding className='iconDescriptions'/> : ""}
-                                {itens.link != "" ? <button className="butSide" onClick={()=>{window.location.href = itens.link}}>{itens.title}</button> : <button className="butSide">{itens.title}</button>}
+                                {iten.title === `Novidades` ? <TbNews className='iconDescriptions'/> : ""}
+                                {iten.title === `Pagina Inicial` ? <IoHomeOutline className='iconDescriptions'/> : ""}
+                                {iten.title === `Cadastro` ? <PiCashRegisterLight className='iconDescriptions'/> : ""}
+                                {iten.title === `Controle de Obras` ? <FaRegBuilding className='iconDescriptions'/> : ""}
+                                {iten.link != "" ? <button className="butSide" onClick={()=>{window.location.href = iten.link}}>{iten.title}</button> : <button className="butSide">{iten.title}</button>}
                             </div>
-                            {itens.itens != "" ? <IoChevronForwardOutline className='i_Side' id={`icons${index}`}/> : ""}
+                            {iten.itens != "" ? <IoChevronForwardOutline className='i_Side' id={`icons${iten.title}${index}`}/> : ""}
                         </div>
-                            {itens.itens != "" ? 
-                                <div className='list' id={`subDiv${index}`}>
-                                    <ul>
-                                        {itens.itens.map((subItens, index) => {
-                                            return(
-                                                <li key={index} className='select' onClick={() => {
-                                                    window.location.href = subItens.link
-                                                }}>{subItens.title}</li>  
-                                            )
-                                        })}
-                                    </ul>
-                                </div> 
+                            {iten.itens != "" ?
+                                <div className='list' id={`subDiv${iten.title}${index}`}>
+                                    {iten.itens.map((subitens, index) => {
+                                        return(
+                                            <>
+                                                {subitens.link != "" ? 
+                                                    <div key={index} className='ContentTitle select'>
+                                                        <button className="butSide" onClick={()=>{window.location.href = subitens.link}}>{subitens.title}</button>
+                                                    </div>
+                                                : 
+                                                 <div key={index} className='ContentTitle teste' onClick={() => {
+                                                    const icon = document.getElementById(`iconsSub${subitens.title}${index}`)
+                                                    const div = document.getElementById(`subDivSub${subitens.title}${index}`)
+                                                    if(div.style.display === 'flex'){
+                                                        icon.classList.add('animationDesactiveIcon')
+                                                        icon.classList.remove('animationActiveIcon')
+                                                        div.classList.add('animationDesactiveDiv')
+                                                        div.classList.remove('animationActiveDiv')
+                                                        div.style.display = 'none'
+                                                    }else{
+                                                        icon.classList.add('animationActiveIcon')
+                                                        icon.classList.remove('animationDesactiveIcon')
+                                                        div.classList.add('animationActiveDiv')
+                                                        div.classList.remove('animationDesactiveDiv')
+                                                        div.style.display = 'flex'
+                                                    }}}>
+                                                        <div className='ContentTitle select'>
+                                                            <button  className="butSide">{subitens.title}</button>
+                                                            {subitens.itens != "" ? <IoChevronForwardOutline className='i_Side' id={`iconsSub${subitens.title}${index}`}/> : ""}
+                                                        </div>
+                                                            {subitens.itens != "" ?
+                                                                <div className='list' id={`subDivSub${subitens.title}${index}`}>
+                                                                    {subitens.itens.map((subSubitens, index) => {
+                                                                        return(
+                                                                            <>
+                                                                                {subSubitens.link == "" ? 
+                                                                                    <ul key={index} className='ContentTitle select'>
+                                                                                        <li className="butSide" onClick={()=>{window.location.href = subSubitens.link}}>{subSubitens.title}</li>
+                                                                                    </ul>
+                                                                                : ""}
+                                                                            </>
+                                                                        )
+                                                                    })}
+                                                                </div>
+                                                            : "" }
+                                                 </div>
+                                                }
+                                            </>
+                                        )
+                                    })}
+                                </div>
                             : "" }
                     </div>
                 )
