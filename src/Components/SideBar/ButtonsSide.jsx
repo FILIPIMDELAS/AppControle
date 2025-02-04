@@ -9,7 +9,6 @@ import { TbNews } from "react-icons/tb";
 
 
 
-export default function ButtonsSide(){
     return(
         <>
             {MenuItens.map((iten, index) => {
@@ -46,7 +45,7 @@ export default function ButtonsSide(){
                                         return(
                                             <>
                                                 {subitens.link != "" ? 
-                                                    <div key={index} className='ContentTitle select'>
+                                                    <div className='ContentTitle select'>
                                                         <button className="butSide" onClick={()=>{window.location.href = subitens.link}}>{subitens.title}</button>
                                                     </div>
                                                 : 
