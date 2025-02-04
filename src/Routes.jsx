@@ -1,13 +1,17 @@
 import { Route, Routes } from 'react-router-dom'
-import Service from './Pages/Register/Services/Services'
-import NewRegSer from './Pages/Register/Services/NewRegSer'
-import Work from './Pages/Register/Work/Work'
-import NewRegWork from './Pages/Register/Work/NewRegWork'
 import User from './Pages/Register/User/User'
 import NewRegUser from './Pages/Register/User/NewRegUser'
-import Supplier from './Pages/Register/Supplier/Supplier'
-import NewRegSup from './Pages/Register/Supplier/NewRegSup'
 import Home from './Pages/Home/Home'
+import AdvancedService from './Pages/ControlWork/AdvancedService/AdvancedService'
+import Login from './Login/Login/Login'
+import EditUser from './Pages/Register/User/EditUser'
+import Error from './Pages/Error/Error'
+import Inauthorization from './Pages/Inauthorization/Inauthorization'
+import RecPassword from './Login/RecPassword/RecPassword'
+import Medicion from './Pages/ControlWork/Medicion/Medicion'
+import ContractReform from './Pages/ControlWork/ContractReform/ContractReform'
+import Programação from './Pages/ControlWork/Programação/Programação'
+import Acomp from './Pages/ControlWork/TesteAcomp/Acomp'
 
 export default function RoutesApp() {
     const BackdropAction = ({ children }) => {
@@ -17,20 +21,31 @@ export default function RoutesApp() {
     return (
       <BackdropAction>
         <Routes>
-          <Route exact path='/Service' element={<Service />} />
-          <Route exact path='/newregService' element={<NewRegSer />} />
-          <Route exact path='/Work' element={<Work />} />
-          <Route exact path='/newregWork' element={<NewRegWork />} />
-          <Route exact path='/User' element={<User />} />
-          <Route exact path='/newregUser' element={<NewRegUser />} />
-          <Route exact path='/Supplier' element={<Supplier />} />
-          <Route exact path='/newregSupplier' element={<NewRegSup />} />
-          <Route exact path='/Home' element={<Home />} />
-          <Route exact path='/' element={<Home />} />
+          <Route path='/User' element={<User />} />
+          <Route path='/newregUser' element={<NewRegUser />} />
+          <Route path='/EditUser/:id' element={<EditUser />} />
+
+          <Route path='/Login' element={<Login />} />
+          <Route path='/recPassword' element={<RecPassword />} />
+
+          <Route path='/Home' element={<Home />} />
+          <Route path='/' element={<Login />} />
+
+          <Route path='/AdvancedService' element={<AdvancedService />} />
+
+          <Route path='/ContractReform' element={<ContractReform />} />          
+
+          <Route path='/Medicion' element={<Medicion />} />
+
+          <Route path='/Programação' element={<Programação />} />
+
+          <Route path='/Acomp' element={<Acomp />} />
+
+          <Route path='/inauthorization' element={<Inauthorization />} />
+
+          <Route exact path='*' element={<Error />} />
+
         </Routes>
       </BackdropAction>
     );
   }
-
-  
-  //<Route exact path='*' element={<Error />} />

@@ -14,3 +14,22 @@ img{
     height: 40px;
     margin: 30px;
 }
+
+.divLogout{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2em;
+    margin: auto 20px 20px auto;
+
+    & .buttonLogout{
+        background-color: transparent;
+        color: var(--colorPrimaryLight);
+        font-size: .9em;
+    }
+}
+
+.divLogout:hover .buttonLogout, .divLogout:hover .iconLogout, .divLogout:hover{
+    cursor: pointer;
+    color: var(--colorPrimaryBlue);
+}
