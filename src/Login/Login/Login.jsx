@@ -7,11 +7,13 @@ import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import Loading from '../../Components/Loading/Loading'
 
 export default function Login(){
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [visPassword, setVisPassword] = useState(true)
+  const [load, setLoad] = useState(false)
 
   const navigate = useNavigate();
 
@@ -36,6 +38,7 @@ export default function Login(){
   }
 
   const handleLogin = async (e) => {
+    setLoad(true)
     e.preventDefault()
     const error = errorLogin.current
     error.style.display = 'none'
@@ -62,6 +65,8 @@ export default function Login(){
   };
 
   return(
+    <>
+    {load ? <Loading/> : 
     <div className='BackgroundLogin'>
       <div className='ContentLogin'>
         <div className='Login'>
@@ -83,5 +88,7 @@ export default function Login(){
         </div>
       </div>
     </div>
+  }
+  </>
   )
 }
